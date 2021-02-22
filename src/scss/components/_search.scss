@@ -1,0 +1,125 @@
+.search__title {
+  margin-top: 40px;
+
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 140%;
+  text-align: center;
+}
+
+.search__list {
+  display: flex;
+  align-items: start;
+  flex-wrap: wrap;
+  margin-top: 34px;
+  padding-left: 0;
+  list-style: none;
+}
+
+.search__item {
+  position: relative;
+  z-index: 1;
+
+  width: 31.7%;
+  padding: 40px 45px 30px 45px;
+  margin: 0 auto 15px auto;
+
+  background: #ffffff;
+  box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.05);
+  border-radius: 49px;
+
+  &:nth-child(1) .search__input::after {
+    top: -64px;
+    right: 0;
+    content: url('../img/look-ciabatta.png');
+  }
+  &:nth-child(2) .search__input::after {
+    top: -69px;
+    right: 9px;
+    content: url('../img/look-avocado.png');
+  }
+  &:nth-child(3) .search__input::after {
+    top: -82px;
+    right: 0;
+    content: url('../img/look-smuzi.png');
+  }
+}
+
+.search__item-title {
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 140%;
+}
+
+.search__input {
+  position: relative;
+
+  width: 100%;
+  margin-top: 23px;
+  padding: 12px 18px;
+
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 140%;
+
+  border: 2px solid #6db900;
+  box-sizing: border-box;
+  box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.05);
+  border-radius: 55px;
+  background-color: $white;
+
+  svg {
+    margin-right: 11px;
+  }
+
+  &::after {
+    position: absolute;
+    z-index: -1;
+  }
+}
+
+.search__city-list {
+  padding-left: 0;
+  margin-top: 20px;
+
+  list-style: none;
+}
+
+.search__city-item {
+  position: relative;
+
+  margin-bottom: 15px;
+
+  &::before {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 70%;
+    height: 1px;
+    background-color: rgba(146, 146, 146, 0.5);
+
+    content: ""
+  }
+}
+
+.search__result {
+  margin-bottom: 5px;
+
+  font-weight: bold;
+  font-size: 34px;
+  line-height: 140%;
+  text-align: center;
+}
+
+.search__city {
+  padding-bottom: 15px;
+  margin-bottom: 0;
+
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 140%;
+  color: #929292;
+  text-align: center;
+}

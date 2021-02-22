@@ -1,0 +1,83 @@
+@import './lib/reboot.scss';
+@import './base/mixins.scss';
+@import './base/variables.scss';
+@import './lib/fonts.scss';
+
+@import './components/modal.scss';
+@import './components/priv-policy.scss';
+@import './components/header.scss';
+@import './components/desc.scss';
+@import './components/line-form.scss';
+@import './components/button.scss';
+@import './components/adv.scss';
+@import './components/search.scss';
+@import './components/calc.scss';
+@import './components/exp.scss';
+@import './components/points.scss';
+@import './components/target.scss';
+@import './components/reviews.scss';
+@import './components/slider.scss';
+@import './components/menu.scss';
+@import './components/formats.scss';
+@import './components/steps.scss';
+@import './components/share.scss';
+
+body {
+  font-family: 'Montserrat';
+  color: $black;
+}
+
+.container {
+  max-width: 1144px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+  @media (max-width: 1200px) {
+    padding: 0 30px;
+  }
+  @media (max-width: 575px) {
+    padding: 0 15px;
+  }
+}
+
+.green-underline {
+  position: relative;
+  &::after {
+    content: '';
+    width: 100%;
+    height: 20px;
+    background-color: rgba(109, 185, 0, 0.75);
+    position: absolute;
+    bottom: 2px;
+    z-index: -1;
+    left: 3px;
+    transform: skewX(30deg);
+    border-radius: 4px;
+  }
+
+  &_small::after {
+    width: 101%;
+    bottom: -2px;
+    left: 50%;
+    transform: skewX(30deg) translateX(-49%);
+  }
+
+  &_extra-small::after {
+    width: 105%;
+    left: 50%;
+    transform: skewX(20deg) translateX(-49%);
+    height: 11px;
+    bottom: 1px;
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+}

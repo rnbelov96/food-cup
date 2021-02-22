@@ -1,0 +1,48 @@
+.points {
+  margin-top: 93px;
+}
+
+.points__title {
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 140%;
+  text-align: center;
+}
+
+.points__list {
+  position: relative;
+
+  margin-top: 20px;
+  display: flex;
+
+  &::before {
+    position: absolute;
+    z-index: -1;
+
+    left: 50%;
+    transform: translate3d(-50%, -90px, 0);
+
+    content: url("../img/table-ark.png")
+  }
+}
+
+.points__item {
+  margin-left: auto;
+  margin-right: auto;
+
+  width: 48%;
+
+  background: #ffffff;
+  box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+
+  overflow: hidden;
+}
+
+.points__caption {
+  padding: 20px;
+
+  text-align: center;
+  font-size: 17px;
+  line-height: 140%;
+}

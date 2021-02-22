@@ -1,0 +1,48 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__text {
+  font-size: 16px;
+
+  margin-bottom: 0;
+}
+
+.header__phone-box {
+  border: 1px solid #6db900;
+  border-radius: 25px;
+
+  display: flex;
+  align-items: center;
+  padding: 14px 19px;
+}
+
+.header__phone {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  color: $black;
+  text-decoration: none;
+
+  margin-left: 10px;
+
+  position: relative;
+  top: 1px;
+  &:hover {
+    color: $green;
+    text-decoration: none;
+  }
+}
+
+.header__contact-caption {
+  color: $grey;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+
+  margin-bottom: 0;
+  margin-top: 10px;
+}

@@ -1,0 +1,63 @@
+.adv {
+  min-height: 1783px;
+  padding: 56px 0;
+
+  background-position: center top;
+  background-repeat: repeat-y;
+  background-image: url('../img/bgs/adv-bg.jpg');
+}
+
+.adv__title {
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 140%;
+  text-align: center;
+  span {
+    color: $green;
+  }
+}
+
+.adv__list {
+  width: 75%;
+  margin: 25px auto 0 auto;
+}
+
+.adv__item {
+  position: relative;
+
+  width: 100%;
+  padding: 30px 46px 10px 30px;
+  display: flex;
+  align-items: start;
+  margin-bottom: 15px;
+
+  background: #ffffff;
+  box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.1);
+  border-radius: 18px;
+
+  &:first-child {
+    padding-right: 170px;
+  }
+  &:first-child::after {
+    position: absolute;
+    top: -19px;
+    right: -155px;
+    z-index: 1;
+
+    content: url("../img/ciabatta.png")
+  }
+}
+
+.adv__item-title {
+  font-style: italic;
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 140%;
+}
+
+.adv__item-text {
+  margin-top: 10px;
+
+  font-size: 17px;
+  line-height: 140%;
+}

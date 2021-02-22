@@ -1,0 +1,52 @@
+.reviews {
+  min-height: 1368px;
+  padding: 55px 0;
+
+  @include bg;
+  background-image: url('/src/img/bgs/review-bg.jpg');
+}
+
+.reviews__title {
+  margin-bottom: 0;
+
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 140%;
+  text-align: center;
+  color: $white;
+}
+
+.reviews__review-box {
+  width: 77%;
+  padding: 35px 55px;
+
+  background: #ffffff;
+  box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.1);
+  border-radius: 18px;
+}
+
+.reviews__review-company {
+  margin-bottom: 0;
+
+  font-style: italic;
+  font-weight: 900;
+  font-size: 22px;
+  line-height: 140%;
+}
+
+.reviews__review-text {
+  margin-top: 15px;
+
+  font-size: 17px;
+  line-height: 140%;
+}
+
+.reviews__form-title {
+  margin-top: 40px;
+
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 140%;
+  text-align: center;
+  color: $white;
+}

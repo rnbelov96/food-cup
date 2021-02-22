@@ -1,0 +1,137 @@
+.formats {
+  min-height: 1624px;
+  padding: 56px 0;
+
+  background-position: center top;
+  background-repeat: repeat-y;
+  background-image: url('../img/bgs/tables-bg.jpg');
+}
+
+.formats__title {
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 140%;
+  color: $white;
+  text-align: center;
+}
+
+.formats__table-title {
+  margin-top: 65px;
+
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 140%;
+  color: $white;
+  text-align: center;
+
+  &_large-table {
+    margin-top: 90px;
+  }
+}
+
+.formats__table {
+  position: relative;
+  z-index: 1;
+
+  padding: 50px 30px 40px 40px;
+  margin-top: 24px;
+
+  background: #ffffff;
+  box-shadow: 0px 20px 45px rgba(0, 0, 0, 0.35);
+  border-radius: 18px;
+
+  &_medium::before, &_large::before {
+    position: absolute;
+    left: 50%;
+    transform: translate3d(-50%, -144px, 0);
+    z-index: -1;
+
+    content: url("/src/img/table-ark.png");
+  }
+  &_medium::after {
+    position: absolute;
+    left: 110px;
+    top: -92px;
+    z-index: -1;
+
+    content: url("/src/img/ruler.png");
+  }
+
+  &_large::after {
+    position: absolute;
+    left: 710px;
+    top: -190px;
+    z-index: -1;
+
+    content: url("/src/img/building.png");
+  }
+}
+
+.formats__table-row {
+  display: flex;
+}
+
+.formats__table-cell {
+  padding: 20px 10px;
+
+  text-align: center;
+  font-weight: 600;
+  font-size: 26px;
+  line-height: 140%;
+
+  border-right: 1px solid rgba(109, 185, 0, 0.5);
+
+  &_head {
+    padding-top: 0;
+
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 140%;
+    color: $green;
+  }
+
+  &_first-medium {
+    width: 27%;
+    padding-left: 30px;
+  }
+
+  &_last-medium {
+    width: calc((100% - 27%) / 2);
+  }
+
+  &_first-large {
+    width: 20%;
+    padding-left: 0;
+  }
+
+  &_last-large {
+    width: calc((100% - 20%) / 3);
+  }
+
+  &_first-img {
+    background-image: url('/src/img/table-chiabatta-1.png');
+    background-repeat: no-repeat;
+    background-position: 0px center;
+  }
+
+  &_second-img {
+    background-image: url('/src/img/table-chiabatta-2.png');
+    background-repeat: no-repeat;
+    background-position: -6px center;
+  }
+
+  &:first-child {
+    text-align: left;
+  }
+
+  &:last-child {
+    border-right: none;
+  }
+}
+
+.formats__table-text {
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 140%;
+  text-align: center;
+}
