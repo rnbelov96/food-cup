@@ -1,3 +1,12 @@
+@import './lib/reboot.scss';
+@import './lib/fonts.scss';
+@import './base/variables.scss';
+@import './base/mixins.scss';
+@import './base/global.scss';
+@import './components/header.scss';
+@import './components/button.scss';
+@import './components/footer.scss';
+
 .thanks,
 .error {
   height: 100%;
@@ -5,7 +14,7 @@
   flex-direction: column;
   &__body {
     @include bg;
-    background-image: url('../img/bgs/desc-bg.png');
+    background-image: url('/src/img/bgs/desc-bg.png');
     background-attachment: fixed;
   }
   &__body,
