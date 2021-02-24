@@ -5,6 +5,10 @@
   background-position: center top;
   background-repeat: repeat-y;
   background-image: url('../img/bgs/review-bg.jpg');
+
+  @media (min-width: 1901px) {
+    @include bg;
+  }
 }
 
 .share__title {
@@ -13,13 +17,17 @@
   line-height: 140%;
   text-align: center;
   color: #ffffff;
+
+  @media (max-width: 575px) {
+    font-size: 24px;
+  }
 }
 
 .share__list {
   margin-top: 44px;
   padding: 0;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   flex-wrap: wrap;
   align-items: flex-start;
 

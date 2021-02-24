@@ -4,9 +4,16 @@
 
   @include bg;
   background-image: url('/src/img/bgs/review-bg.jpg');
+
+  @media (max-width: 575px) {
+    padding-bottom: 0;
+    min-height: 1330px;
+  }
 }
 
 .reviews__title {
+  position: relative;
+
   margin-bottom: 0;
 
   font-weight: 800;
@@ -14,6 +21,24 @@
   line-height: 140%;
   text-align: center;
   color: $white;
+
+  &::before {
+    position: absolute;
+
+    bottom: -69px;
+    left: 122px;
+
+    content: url("/src/img/icons/review-arrow.svg");
+
+    @media (max-width: 991px) {
+      content: none;
+    }
+  }
+
+  @media (max-width: 575px) {
+    font-size: 23px;
+  }
+
 }
 
 .reviews__review-box {
@@ -23,6 +48,15 @@
   background: #ffffff;
   box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.1);
   border-radius: 18px;
+
+  @media (max-width: 767px) {
+    width: 100%;
+    box-shadow: none;
+  }
+
+  @media (max-width: 575px) {
+    padding: 20px;
+  }
 }
 
 .reviews__review-company {
@@ -49,4 +83,8 @@
   line-height: 140%;
   text-align: center;
   color: $white;
+
+  @media (max-width: 575px) {
+    font-size: 20px;
+  }
 }

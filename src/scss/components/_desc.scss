@@ -15,6 +15,17 @@
   font-weight: 800;
   font-size: 48px;
   line-height: 140%;
+
+  @media (max-width: 767px) {
+    font-size: 43px;
+    & br {
+      display: none;
+    }
+  }
+
+  @media (max-width: 575px) {
+    font-size: 27px;
+  }
 }
 
 .desc__text {
@@ -28,6 +39,16 @@
     font-weight: 800;
     color: $green;
   }
+
+  @media (max-width: 767px) {
+    & br {
+      display: none;
+    }
+  }
+
+  @media (max-width: 575px) {
+    font-size: 22px;
+  }
 }
 
 .desc__img {
@@ -35,6 +56,14 @@
   z-index: -1;
   right: -60px;
   top: 95px;
+
+  @media (max-width: 1200px) {
+    right: -200px;
+  }
+
+  @media (max-width: 991px) {
+    display: none;
+  }
 }
 
 .desc__caption {
@@ -57,6 +86,12 @@
 
     content: url('../img/icons/triangle.png');
   }
+
+  @media (max-width: 767px) {
+    & br {
+      display: none;
+    }
+  }
 }
 
 .desc__form-title {
@@ -67,16 +102,35 @@
   line-height: 140%;
   text-align: center;
 
+  @media (max-width: 991px) {
+    &::before, &::after {
+      display: none;
+    }
+  }
+
   &::before {
     position: absolute;
     transform: translate3d(calc(-100% - 15px), 10px, 0);
 
     content: url('../img/icons/desc-arrow-left.svg');
+
+    @media (max-width: 1200px) {
+      transform: translate3d(calc(-100% - 5px), 10px, 0);
+    }
   }
   &::after {
     position: absolute;
-    transform: translate3d(calc(15px), 10px, 0);
+    transform: translate3d(15px, 10px, 0);
 
     content: url('../img/icons/desc-arrow-right.svg');
+
+    @media (max-width: 1200px) {
+      transform: translate3d(5px, 10px, 0);
+    }
   }
+
+  @media (max-width: 575px) {
+    margin-top: 25px;
+  }
+
 }

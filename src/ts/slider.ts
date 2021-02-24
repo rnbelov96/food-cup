@@ -144,6 +144,8 @@ const swipeEnd = () => {
     if (currentImage === 0) {
       currentImage = imagesLength;
     }
+    navItemList[currentImage - 1].classList.add('slider__nav-item_active');
+    navItemList[prevCurrentImage - 1].classList.remove('slider__nav-item_active');
   }
 
   if (offset > translateStep / 2) {
@@ -152,12 +154,11 @@ const swipeEnd = () => {
     if (currentImage === imagesLength + 1) {
       currentImage = 1;
     }
+    navItemList[currentImage - 1].classList.add('slider__nav-item_active');
+    navItemList[prevCurrentImage - 1].classList.remove('slider__nav-item_active');
   }
 
   offset = 0;
-
-  navItemList[currentImage - 1].classList.add('slider__nav-item_active');
-  navItemList[prevCurrentImage - 1].classList.remove('slider__nav-item_active');
 
   imagesBoxEl.style.transform = `translate3d(${translateXPos}%, 0px, 0px)`;
 

@@ -5,6 +5,16 @@
   font-size: 30px;
   line-height: 140%;
   text-align: center;
+
+  @media (max-width: 991px) {
+    & br {
+      display: none;
+    }
+  }
+
+  @media (max-width: 575px) {
+    font-size: 22px;
+  }
 }
 
 .search__list {
@@ -42,6 +52,25 @@
     top: -82px;
     right: 0;
     content: url('../img/look-smuzi.png');
+  }
+
+  @media (max-width: 1200px) {
+    padding: 40px 24px 30px 24px;
+  }
+
+  @media (max-width: 991px) {
+    width: 60%;
+    margin-bottom: 20px;
+  }
+
+  @media (max-width: 767px) {
+    width: 70%;
+    margin-bottom: 20px;
+  }
+
+  @media (max-width: 575px) {
+    width: 100%;
+    margin-bottom: 20px;
   }
 }
 
@@ -100,7 +129,7 @@
     height: 1px;
     background-color: rgba(146, 146, 146, 0.5);
 
-    content: ""
+    content: '';
   }
 }
 

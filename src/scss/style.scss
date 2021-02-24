@@ -21,6 +21,10 @@
 @import './components/formats.scss';
 @import './components/steps.scss';
 @import './components/share.scss';
+@import './components/feedback.scss';
+@import './components/form.scss';
+@import './components/footer.scss';
+@import './components/thanks.scss';
 
 body {
   font-family: 'Montserrat';
@@ -32,6 +36,11 @@ body {
   margin: 0 auto;
   position: relative;
   z-index: 1;
+
+  &_footer {
+    min-height: inherit;
+  }
+
   @media (max-width: 1200px) {
     padding: 0 30px;
   }
@@ -68,6 +77,39 @@ body {
     transform: skewX(20deg) translateX(-49%);
     height: 11px;
     bottom: 1px;
+  }
+
+  &_calc {
+    @media (max-width: 575px) {
+      &::after {
+        content: none;
+      }
+    }
+  }
+}
+
+.input-error,
+.input-error:hover {
+  border: solid #ce211f 1px;
+  & + svg {
+    path,
+    rect {
+      fill: #ce211f;
+    }
+  }
+  color: #ce211f;
+
+  &::-webkit-input-placeholder {
+    color: #ce211f;
+  }
+  &::-moz-placeholder {
+    color: #ce211f;
+  }
+  &:-ms-input-placeholder {
+    color: #ce211f;
+  }
+  &:-moz-placeholder {
+    color: #ce211f;
   }
 }
 

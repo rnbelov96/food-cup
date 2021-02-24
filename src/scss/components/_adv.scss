@@ -5,6 +5,12 @@
   background-position: center top;
   background-repeat: repeat-y;
   background-image: url('../img/bgs/adv-bg.jpg');
+
+  overflow-x: hidden;
+
+  @media (min-width: 1921px) {
+    @include bg;
+  }
 }
 
 .adv__title {
@@ -15,11 +21,19 @@
   span {
     color: $green;
   }
+
+  @media (max-width: 575px) {
+    font-size: 30px;
+  }
 }
 
 .adv__list {
   width: 75%;
   margin: 25px auto 0 auto;
+
+  @media (max-width: 575px) {
+    width: 100%;
+  }
 }
 
 .adv__item {
@@ -37,6 +51,16 @@
 
   &:first-child {
     padding-right: 170px;
+
+    @media (max-width: 1200px) {
+      & br {
+        display: none;
+      }
+    }
+
+    @media (max-width: 991px) {
+      padding-right: 46px;
+    }
   }
   &:first-child::after {
     position: absolute;
@@ -44,7 +68,21 @@
     right: -155px;
     z-index: 1;
 
-    content: url("../img/ciabatta.png")
+    content: url('../img/ciabatta.png');
+
+    @media (max-width: 991px) {
+      content: none;
+    }
+  }
+
+  @media (max-width: 767px) {
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 30px 10px 30px;
+  }
+
+  @media (max-width: 575px) {
+    padding: 20px 20px 10px 20px;
   }
 }
 

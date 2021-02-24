@@ -18,6 +18,10 @@
   &_share {
     margin-top: 40px;
   }
+
+  @media (max-width: 991px) {
+    display: none;
+  }
 }
 
 .line-form__caption-box {
@@ -76,6 +80,39 @@
   }
 }
 
+.line-form__caption-arrow {
+  position: absolute;
+
+  &_calc {
+    top: 115px;
+    right: 124px;
+  }
+
+  &_target {
+    top: 70px;
+    right: 54px;
+  }
+
+  &_slider {
+    top: 120px;
+    right: 95px;
+  }
+
+  &_menu {
+    top: 67px;
+    right: 121px;
+  }
+
+  &_share {
+    top: 166px;
+    right: 153px;
+  }
+
+  @media (max-width: 1200px) {
+    display: none;
+  }
+}
+
 .line-form__caption-underline {
   position: relative;
 
@@ -120,6 +157,10 @@
 
 .line-form__input-list {
   display: flex;
+
+  @media (max-width: 1200px) {
+    width: 80%;
+  }
 }
 
 .line-form__input-box {
@@ -127,7 +168,6 @@
 
   display: flex;
   align-items: center;
-  padding-left: 30px;
 
   &:last-child::after {
     content: none;
@@ -146,10 +186,25 @@
   }
 }
 
+.line-form__input-icon {
+  position: absolute;
+  left: 22px;
+}
+
 .line-form__input {
   font-size: 16px;
   line-height: 140%;
   margin-left: 8px;
+  margin-right: 4px;
+  padding-left: 50px;
+  padding-top: 23px;
+  padding-bottom: 23px;
+
+  &:focus {
+    border: 1px $green solid;
+    outline: none;
+  }
+
   &::-webkit-input-placeholder {
     color: $grey;
     font-size: 15px;
@@ -172,6 +227,7 @@
   }
 
   border: none;
+  border-radius: 33px;
 }
 
 .line-form__policy-text {
@@ -182,7 +238,7 @@
   line-height: 140%;
 
   &_white {
-    color: $white
+    color: $white;
   }
 }
 

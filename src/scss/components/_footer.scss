@@ -1,0 +1,141 @@
+.footer {
+  min-height: 211px;
+
+  @include bg;
+  background-image: url('/src/img/bgs/review-bg.jpg');
+}
+
+.footer__wrapper {
+  min-height: inherit;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media (max-width: 991px) {
+    flex-direction: column;
+    align-items: center;
+
+    padding: 20px 0;
+
+    & div {
+      margin-bottom: 20px;
+    }
+
+    & div:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.footer__text {
+  margin-bottom: 0;
+
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 140%;
+  color: #ffffff;
+
+  @media (max-width: 575px) {
+    font-size: 22px;
+  }
+}
+
+.footer__policy {
+  margin-top: 15px;
+  padding: 0;
+
+  color: $white;
+
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid $white;
+}
+
+.footer__link-list {
+  display: flex;
+  padding: 0;
+
+  list-style: none;
+}
+
+.footer__link-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 50px;
+  height: 50px;
+  margin-right: 35px;
+
+  border-radius: 50%;
+
+  &_facebook {
+    background-color: #4e6297;
+  }
+
+  &_vk {
+    background-color: #7294c7;
+  }
+
+  &_instagram {
+    margin-right: 0;
+
+    background: linear-gradient(
+      43.94deg,
+      #eea054 16.16%,
+      #d64763 50.11%,
+      #b62a99 83.68%
+    );
+  }
+}
+
+.footer__text-box {
+  @media (max-width: 991px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.footer__phone-box,
+.footer__address-box {
+  display: flex;
+  align-items: flex-start;
+}
+
+.footer__phone-box {
+  margin-bottom: 15px;
+}
+
+.footer__phone-icon {
+  margin-right: 18px;
+}
+
+.footer__address-icon {
+  margin-right: 21px;
+}
+
+.footer__phone {
+  margin-bottom: 0;
+
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 21px;
+  color: #ffffff;
+  text-decoration: none;
+
+  &:hover {
+    color: $green;
+    text-decoration: none;
+  }
+}
+
+.footer__address {
+  margin-bottom: 0;
+
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 21px;
+  color: #ffffff;
+}

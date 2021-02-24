@@ -5,6 +5,10 @@
   background-position: center top;
   background-repeat: repeat-y;
   background-image: url('../img/bgs/tables-bg.jpg');
+
+  @media (min-width: 1901px) {
+    @include bg;
+  }
 }
 
 .formats__title {
@@ -26,6 +30,13 @@
 
   &_large-table {
     margin-top: 90px;
+    @media (max-width: 991px) {
+      margin-top: 35px;
+    }
+  }
+
+  @media (max-width: 991px) {
+    margin-top: 35px; 
   }
 }
 
@@ -55,6 +66,10 @@
     z-index: -1;
 
     content: url("/src/img/ruler.png");
+
+    @media (max-width: 991px) {
+      content: none;
+    }
   }
 
   &_large::after {
@@ -64,6 +79,36 @@
     z-index: -1;
 
     content: url("/src/img/building.png");
+
+    @media (max-width: 1200px) {
+      left: 646px;
+    }
+
+    @media (max-width: 991px) {
+      content: none;
+    }
+  }
+
+  @media (max-width: 991px) {
+    padding: 50px 0px 40px 10px;
+  }
+
+  @media (max-width: 575px) {
+    padding: 20px 0px 20px 10px;
+  }
+
+  &_small {
+    display: none;
+
+    @media (max-width: 575px) {
+      display: block;
+    }
+  }
+
+  &_medium, &_large {
+    @media (max-width: 575px) {
+      display: none;
+    }
   }
 }
 
@@ -99,6 +144,16 @@
     width: calc((100% - 27%) / 2);
   }
 
+  &_first-small {
+    width: 50%;
+    padding-left: 0px;
+    text-align: center;
+  }
+
+  &_last-small {
+    width: 50%;
+  }
+
   &_first-large {
     width: 20%;
     padding-left: 0;
@@ -111,22 +166,41 @@
   &_first-img {
     background-image: url('/src/img/table-chiabatta-1.png');
     background-repeat: no-repeat;
+    background-size: contain;
     background-position: 0px center;
   }
 
   &_second-img {
     background-image: url('/src/img/table-chiabatta-2.png');
     background-repeat: no-repeat;
+    background-size: contain;
     background-position: -6px center;
   }
 
   &:first-child {
     text-align: left;
+
+    @media (max-width: 575px) {
+      text-align: center;
+    }
   }
 
   &:last-child {
     border-right: none;
   }
+
+  @media (max-width: 1200px) {
+    font-size: 22px;
+  }
+
+  @media (max-width: 991px) {
+    font-size: 18px;
+  }
+
+  @media (max-width: 575px) {
+    font-size: 16px;
+  }
+
 }
 
 .formats__table-text {
@@ -134,4 +208,10 @@
   font-size: 17px;
   line-height: 140%;
   text-align: center;
+
+  @media (max-width: 575px) {
+    font-size: 14px;
+  }
+
+  font-size: 14px;
 }

@@ -5,6 +5,14 @@
   background-position: center top;
   background-repeat: repeat-y;
   background-image: url('../img/bgs/menu-bg.jpg');
+
+  @media (min-width: 1901px) {
+    @include bg;
+  }
+
+  @media (max-width: 1200px) {
+    padding-bottom: 10px;
+  }
 }
 
 .steps__title {
@@ -15,6 +23,10 @@
   span {
     color: $green;
   }
+
+  @media (max-width: 575px) {
+    font-size: 30px;
+  }
 }
 
 .steps__subtitle {
@@ -24,6 +36,14 @@
   font-size: 30px;
   line-height: 140%;
   text-align: center;
+
+  @media (max-width: 991px) {
+    margin-top: 20px;
+  }
+
+  @media (max-width: 991px) {
+    font-size: 25px;
+  }
 }
 
 .steps__list {
@@ -34,6 +54,11 @@
   margin-top: 23px;
 
   list-style: none;
+
+  @media (max-width: 1200px) {
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
 }
 
 .steps__item {
@@ -49,14 +74,22 @@
       left: 50%;
       transform: translate3d(-50%, -87%, 0);
 
-      content: url("/src/img/icons/start.svg")
+      content: url('/src/img/icons/start.svg');
+
+      @media (max-width: 1200px) {
+        content: none;
+      }
     }
     &::after {
       position: absolute;
       right: -143px;
       top: -77px;
 
-      content: url("/src/img/icons/steps-1.svg")
+      content: url('/src/img/icons/steps-1.svg');
+
+      @media (max-width: 1200px) {
+        content: none;
+      }
     }
     .steps__item-content {
       background-image: url('/src/img/step-1.png');
@@ -77,7 +110,15 @@
       right: -96px;
       bottom: -101px;
 
-      content: url("/src/img/icons/steps-2.svg")
+      content: url('/src/img/icons/steps-2.svg');
+
+      @media (max-width: 1200px) {
+        content: none;
+      }
+    }
+
+    @media (max-width: 1200px) {
+      top: 0;
     }
   }
   &:nth-child(3) {
@@ -94,7 +135,15 @@
       right: -50px;
       top: -148px;
 
-      content: url("/src/img/icons/steps-3.svg")
+      content: url('/src/img/icons/steps-3.svg');
+
+      @media (max-width: 1200px) {
+        content: none;
+      }
+    }
+
+    @media (max-width: 1200px) {
+      top: 0;
     }
   }
   &:nth-child(4) {
@@ -105,7 +154,11 @@
       left: 50%;
       transform: translate3d(-50%, -87%, 0);
 
-      content: url("/src/img/icons/rocket.svg")
+      content: url('/src/img/icons/rocket.svg');
+
+      @media (max-width: 1200px) {
+        content: none;
+      }
     }
 
     .steps__item-content {
@@ -113,6 +166,10 @@
       background-repeat: no-repeat;
       background-position: bottom center;
     }
+  }
+
+  @media (max-width: 1200px) {
+    margin-bottom: 25px;
   }
 }
 
