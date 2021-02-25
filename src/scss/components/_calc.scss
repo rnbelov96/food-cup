@@ -154,13 +154,13 @@
 
   border-radius: 8px;
   background-color: #353b41;
-  // background: linear-gradient(
-  //   to right,
-  //   $green 0%,
-  //   $green 55.6%,
-  //   #353b41 55.6%,
-  //   #353b41 100%
-  // );
+  background: linear-gradient(
+    to right,
+    $green 0%,
+    $green 55.6%,
+    #353b41 55.6%,
+    #353b41 100%
+  );
   appearance: none;
   -moz-appearance: none;
   -webkit-appearance: none;

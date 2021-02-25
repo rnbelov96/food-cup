@@ -4,3 +4,4 @@ import './scss/style.scss';
 import './ts/modals';
 import './ts/slider';
 import './ts/form-validation';
+import './ts/calc';
